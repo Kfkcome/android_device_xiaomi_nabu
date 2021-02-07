@@ -380,8 +380,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-nabu \
-    android.hardware.power-impl
+    android.hardware.power-service-qti
 
 # Public libraries
 PRODUCT_COPY_FILES += \
