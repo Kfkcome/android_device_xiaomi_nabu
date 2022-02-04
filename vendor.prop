@@ -230,6 +230,10 @@ ro.surface_flinger.set_idle_timer_ms=350
 ro.surface_flinger.set_touch_timer_ms=750
 ro.surface_flinger.wcg_composition_dataspace=143261696
 
+# Dexopt
+pm.dexopt.first-boot=quicken
+pm.dexopt.bg-dexopt=everything
+
 # Dolby
 persist.vendor.audio_fx.current=dolby
 vendor.audio.dolby.ds2.enabled=true
