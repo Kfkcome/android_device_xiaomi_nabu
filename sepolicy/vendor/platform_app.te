@@ -9,3 +9,7 @@ allow platform_app sysfs_msm_subsys:file { read open getattr };
 
 r_dir_file(platform_app, vendor_sysfs_battery_supply)
 r_dir_file(platform_app, sysfs_msm_subsys)
+
+allow platform_app hal_dms_hwservice:hwservice_manager find;
+binder_call(platform_app, hal_dms_default)
+get_prop(platform_app, audio_config_prop)
