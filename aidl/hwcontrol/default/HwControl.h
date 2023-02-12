@@ -1,17 +1,9 @@
-//
-// Copyright (C) 2023 Harshit Jain <dev-harsh1998@hotmail.com>
-//
-// SPDX-License-Identifier: Apache-2.0
-//
 #pragma once
 
 #include <aidl/custom/hardware/hwcontrol/BnHwControl.h>
 
 #include <mutex>
 #include <thread>
-
-#include "KeyboardState.h"
-#include "TouchFeatureState.h"
 
 namespace aidl::custom::hardware::hwcontrol {
 
