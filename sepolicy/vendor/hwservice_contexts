@@ -15,3 +15,5 @@ vendor.nxp.nxpnfc::INxpNfc                                          u:object_r:h
 
 # Dolby
 vendor.dolby.hardware.dms::IDms                                                          u:object_r:hal_dms_hwservice:s0
+# Custom HWControl
+custom.hardware.hwcontrol::IHwControl                              u:object_r:hal_hwcontrol_hwservice:s0
