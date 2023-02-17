@@ -1,11 +1,8 @@
-//
-// Copyright (C) 2023 Harshit Jain <dev-harsh1998@hotmail.com>
-//
-// SPDX-License-Identifier: Apache-2.0
-//
 #pragma once
 #include <sys/ioctl.h>
 #include <android-base/unique_fd.h>
+
+#define TAG "TouchFeatureState"
 
 // TouchFeature device declarations
 #define TOUCH_FEATURE_DEVICE "/dev/xiaomi-touch"
