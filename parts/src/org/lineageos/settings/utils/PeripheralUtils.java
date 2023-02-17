@@ -13,11 +13,6 @@ import android.util.Log;
 import org.lineageos.settings.hwcontrol.HwStateManager;
 import custom.hardware.hwcontrol.HwType;
 
-import custom.hardware.hwcontrol.IHwControl;
-import custom.hardware.hwcontrol.HwType;
-import android.os.ServiceManager;
-import android.os.IBinder;
-
 import static org.lineageos.settings.stylus.StylusSettingsFragment.SHARED_STYLUS;
 import static org.lineageos.settings.keyboard.XiaomiKeyboardSettingsFragment.SHARED_KEYBOARD;
 import static org.lineageos.settings.tap2wake.Tap2WakeSettingsFragment.SHARED_TAP2WAKE;
@@ -25,9 +20,7 @@ import static org.lineageos.settings.tap2wake.Tap2WakeSettingsFragment.SHARED_TA
 public class PeripheralUtils {
     private static final String TAG = "PeripheralUtils";
     private static final boolean DEBUG = false;
-    private static final String IHWCONTROL_AIDL_INTERFACE = "custom.hardware.hwcontrol.IHwControl/default";
-    private static IHwControl mHwControl;
-    private static ITouchFeature mTouchFeature;
+    private static HwStateManager mHwStateManager;
     private static SharedPreferences stylus;
     private static SharedPreferences keyboard;
     private static SharedPreferences tap2wake;
@@ -42,18 +35,6 @@ public class PeripheralUtils {
         // Initialize HwStateManager
         mHwStateManager.BootResetState();
 
-        IBinder binder = ServiceManager.getService(IHWCONTROL_AIDL_INTERFACE);
-        if (binder == null) {
-            Log.e(TAG, "Getting " + IHWCONTROL_AIDL_INTERFACE + " service daemon binder failed!");
-        } else {
-            mHwControl = IHwControl.Stub.asInterface(binder);
-            if (mHwControl == null) {
-                Log.e(TAG, "Getting IHwControl AIDL daemon interface failed!");
-            } else {
-                Log.d(TAG, "Getting IHwControl AIDL interface binding success!");
-            }
-        }
-
         // Sync all peripherals
         SyncAll();
     }
@@ -67,15 +48,7 @@ public class PeripheralUtils {
     // Enable keyboard based on shared preference.
     private static void SyncKeyboard() {
         if (DEBUG) Log.d(TAG, "Enabling keyboard");
-        if (mHwControl != null) {
-            try {
-                mHwControl.setHwState(HwType.KEYBOARD, keyboard.getInt(SHARED_KEYBOARD, 0));
-            } catch (Exception e) {
-                Log.e(TAG, "Failed to enable keyboard", e);
-            }
-        } else {
-            Log.d(TAG, "mHwControl is null");
-        }
+        mHwStateManager.HwState(HwType.KEYBOARD, keyboard.getInt(SHARED_KEYBOARD, 0));
     }
 
     // Enable tap2wake based on shared preference.
