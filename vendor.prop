@@ -314,6 +314,7 @@ vendor.gralloc.disable_ubwc=0
 vendor.display.idle_time=0
 vendor.display.idle_time_inactive=0
 debug.sf.predict_hwc_composition_strategy=0
+graphics.gpu.profiler.support=true
 
 # Media
 debug.stagefright.ccodec=1
