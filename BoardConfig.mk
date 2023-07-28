@@ -124,6 +124,8 @@ BOARD_SUPER_PARTITION_SIZE := 9126805504
 BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 9122611200 # (BOARD_SUPER_PARTITION_SIZE - 4MB)
 BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := $(ALL_PARTITIONS)
+BOARD_PRODUCTIMAGE_PARTITION_RESERVED_SIZE := 419430400
+BOARD_SYSTEMIMAGE_PARTITION_RESERVED_SIZE := 419430400
 
 # Partitions - reserved size
 #$(foreach p, $(call to-upper, $(SSI_PARTITIONS)), \
@@ -193,7 +195,7 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/framework_compatibility_matrix.xml \
-    vendor/awaken/config/device_framework_matrix.xml
+    vendor/derp/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
