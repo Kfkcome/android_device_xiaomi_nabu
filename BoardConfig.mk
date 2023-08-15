@@ -195,7 +195,7 @@ BOARD_MOVE_GSI_AVB_KEYS_TO_VENDOR_BOOT := true
 # VINTF
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/framework_compatibility_matrix.xml \
-    vendor/lineage/config/device_framework_matrix.xml
+    vendor/evolution/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE += $(DEVICE_PATH)/compatibility_matrix.xml
@@ -214,5 +214,11 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+TW_THEME := landscape_hdpi
 # Inherit the proprietary files
 include vendor/xiaomi/nabu/BoardConfigVendor.mk
+
+#Twrp
+TWRP_PATH := device/xiaomi/nabu/twrp
+
+TARGET_PREBUILT_RECOVERY_RAMDISK := $(TWRP_PATH)/recovery-ramdisk.zip
