@@ -12,8 +12,19 @@ LOCAL_OVERRIDES_PACKAGES := \
    TeleService \
    Telecom \
    TelephonyProvider \
+   com.android.smspush \
+   com.google.android.apps.messaging \
+   com.google.android.contacts \
+   com.android.providers.contacts \
+   com.android.server.telecom \
+   com.android.mms.service \
+   GoogleDialer \
+   GoogleContacts \
    com.google.android.dialer.support \
+   com.android.phone \
    com.android.phone.common \
+   com.android.providers.telephony \
+   DevicePersonalizationPrebuiltPixel2021 \
    messaging
 
 LOCAL_UNINSTALLABLE_MODULE := true
