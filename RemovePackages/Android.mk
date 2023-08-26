@@ -26,7 +26,7 @@ LOCAL_OVERRIDES_PACKAGES := \
    com.android.telephony.TelephonyManager\
    com.android.phone.common \
    com.android.providers.telephony \
-   DevicePersonalizationPrebuiltPixel2021 \
+   DevicePersonalizationPrebuiltPixel2022 \
    messaging
 
 LOCAL_UNINSTALLABLE_MODULE := true
