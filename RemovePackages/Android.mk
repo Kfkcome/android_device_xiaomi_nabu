@@ -11,7 +11,6 @@ LOCAL_OVERRIDES_PACKAGES := \
    Stk \
    TeleService \
    Telecom \
-   TelephonyProvider \
    com.android.smspush \
    com.google.android.apps.messaging \
    com.google.android.contacts \
