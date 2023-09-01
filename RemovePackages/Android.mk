@@ -12,6 +12,8 @@ LOCAL_OVERRIDES_PACKAGES := \
    TeleService \
    Telecom \
    com.android.smspush \
+   TelephonyProvider \
+   TelephonyManager\
    com.google.android.apps.messaging \
    com.google.android.contacts \
    com.android.providers.contacts \
@@ -21,6 +23,7 @@ LOCAL_OVERRIDES_PACKAGES := \
    GoogleContacts \
    com.google.android.dialer.support \
    com.android.phone \
+   com.android.telephony.TelephonyManager\
    com.android.phone.common \
    com.android.providers.telephony \
    DevicePersonalizationPrebuiltPixel2021 \
