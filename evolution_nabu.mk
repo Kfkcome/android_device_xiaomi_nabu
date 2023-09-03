@@ -15,6 +15,8 @@
 # Inherit some common Awaken stuff.
 $(call inherit-product, vendor/evolution/config/common_full_tablet_wifionly.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_BUILD_APERTURE_CAMERA := true
+EVO_BUILD_TYPE := OFFICIAL
 
 # Inherit some common AOSP stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
