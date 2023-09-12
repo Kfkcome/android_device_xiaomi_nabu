@@ -225,6 +225,10 @@ TW_THEME := landscape_hdpi
 # Inherit the proprietary files
 include vendor/xiaomi/nabu/BoardConfigVendor.mk
 
+# Lineage Health
+TARGET_HEALTH_CHARGING_CONTROL_SUPPORTS_BYPASS := false
+TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/power_supply/battery/charging_enabled
+
 #Twrp
 TWRP_PATH := device/xiaomi/nabu/twrp
 
