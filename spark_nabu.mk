@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit some common EvolutionX stuff.
-$(call inherit-product, vendor/evolution/config/common_full_tablet_wifionly.mk)
+$(call inherit-product, vendor/spark/config/common_full_tablet_wifionly.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_BUILD_APERTURE_CAMERA := true
 EVO_BUILD_TYPE := OFFICIAL

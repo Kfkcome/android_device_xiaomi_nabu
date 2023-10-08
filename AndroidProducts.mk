@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/evolution_nabu.mk
+    $(LOCAL_DIR)/spark_nabu.mk
 
 COMMON_LUNCH_CHOICES := \
-    evolution_nabu-user \
-    evolution_nabu-userdebug \
-    evolution_nabu-eng
+    spark_nabu-user \
+    spark_nabu-userdebug \
+    spark_nabu-eng
