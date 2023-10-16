@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/awaken_nabu.mk
+    $(LOCAL_DIR)/evolution_nabu.mk
 
 COMMON_LUNCH_CHOICES := \
-    awaken_nabu-user \
-    awaken_nabu-userdebug \
-    awaken_nabu-eng
+    evolution_nabu-user \
+    evolution_nabu-userdebug \
+    evolution_nabu-eng
